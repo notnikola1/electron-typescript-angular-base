@@ -5,7 +5,7 @@
 - *npm run build - builds both electron and ui
 - npm run pack - packs into an executable
 
-*NOTE - default Electron file/url config path is for the BUILT version of the UI unless otherwise specified, for running a live dev server for the UI, use the "npm run dev" command or change the default directly in /app/main/Main.ts and run "npm run build" again.
+*NOTE - default Electron file/url config path is for the BUILT version of the UI
 
 This project is a boilerplate that includes Electron (with typescript) and Angular in one package, ready to go, right out of the box.
 I havent found any other boilerplates/templates that are to my liking and/or flexible enough so I decided to make one.
