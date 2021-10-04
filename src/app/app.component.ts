@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { ElectronService } from './electron.service';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +7,6 @@ import { ElectronService } from './electron.service';
 })
 export class AppComponent {
 
-  constructor(private ipc: ElectronService) { }
+  constructor() { }
   title = 'ui';
-  //@ts-ignore
 }
