@@ -5,16 +5,16 @@ let electronProcess;
 
 function runDevServer(){
     console.log(chalk.underline.blue('Starting Angular dev server'));
-    let angularServer = spawn(platform, ['run', 'start']);
+    let angularServer = spawn(platform, ['run', 'start']); //starts ng serve
 
     angularServer.stdout.on('data', (data) => {
         console.log(chalk.cyan(`Angular Server Message: ${data}`));
-    });//starts ng serve
+    });
 
     console.log(chalk.blue('Building Electron app...'));
-    //runs wait-on and looks for localhost:4200 (angular dev server), once available starts the build electron app that loads localhost:4200;
+    
 
-    let buildElectron = platform + ' run build-electron';
+    let buildElectron = platform + ' run build-electron'; //builds electron app from ts
     exec(buildElectron, {}, (msg) => {
         if(msg == null) {
             console.log(chalk.green(`Electron app built!`));
@@ -24,9 +24,11 @@ function runDevServer(){
     });
 
     console.log(chalk.green(`All appears well so far...`));
+    
+    // waiting on localhost:4200 to become available
     electronProcess = spawn(platform, ['run', 'wait-on-angular']).on('exit', () => {
         const command = 'cross-env ENV=dev electron ./dist/app/App.js'
-
+        // run built electron app with localhost:4200
         setTimeout(function(){console.log(chalk.green(`Found angular server!
         All appears good, starting Electron App`))},200);
 
