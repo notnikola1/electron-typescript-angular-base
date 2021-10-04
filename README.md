@@ -63,3 +63,10 @@ electron-packager is used with built files from /dist. This includes both Main f
 
 ipcRenderer is enabled in preload.ts and will be always available regardless of the UI.
 
+# Problems/Bugs/Issues
+
+Create an issue here.
+
+# Pull Requests
+
+PR's are welcome, if you want to add something to the repo, feel free to make a PR.
