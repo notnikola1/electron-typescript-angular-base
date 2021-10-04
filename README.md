@@ -59,7 +59,7 @@ Electron can then be run with the App.js file, just point it in the right direct
 
 ## Packing
 
-electron-packager is used with built files from /dist. This includes both Main folder and UI folder. App signing and/or licencing of any sort is not implemented - you whatever you like.
+electron-packager is used with built files from /dist. This includes both Main folder and UI folder. App signing and/or licencing of any sort is not implemented - use whatever you like.
 
 ipcRenderer is enabled in preload.ts and will be always available regardless of the UI.
 
