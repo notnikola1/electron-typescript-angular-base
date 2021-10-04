@@ -9,6 +9,7 @@
     "ng": "ng",
     "start": "cross-env ENV=dev ng serve",
     "build": "cross-env ENV=prod ./node_modules/.bin/tsc -p ./tsconfig.ele.json && cross-env ENV=prod ng build",
+    "build:dev": "cross-env ENV=dev ./node_modules/.bin/tsc -p ./tsconfig.ele.json && cross-env ENV=dev ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "pack": "node packPrepare.js && electron-packager ./dist/app MyApp --overwrite"
@@ -23,14 +24,14 @@
     "@angular/platform-browser": "~12.2.0",
     "@angular/platform-browser-dynamic": "~12.2.0",
     "@angular/router": "~12.2.0",
-    "chalk": "^4.1.2",
     "concurrently": "^6.2.2",
-    "cross-env": "^7.0.3",
     "rxjs": "~6.6.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
   },
   "devDependencies": {
+    "chalk": "^4.1.2",
+    "cross-env": "^7.0.3",
     "@angular-devkit/build-angular": "~12.2.7",
     "@angular/cli": "~12.2.7",
     "@angular/compiler-cli": "~12.2.0",
