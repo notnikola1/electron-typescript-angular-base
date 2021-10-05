@@ -38,7 +38,7 @@ Edit the build process in package.json accordingly.
 ### Replaing Angular with React example
 
 - Remove everything from /src folder
-- Generate a new React application inside of the /src folder (as in, package.json of the react application is in the /src folder), yes, you can also use typescript, its basically plug and play.
+- Generate a new React application inside of the /src folder
 - Make sure that React app is built into dist/app/ui (use whatever build process you like)
 - Edit package.json to run the correct commands for building and/or running your React app
 - edit dev.server.js to use the correct commands, based on package.json
