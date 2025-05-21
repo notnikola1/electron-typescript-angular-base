@@ -1,19 +1,17 @@
 # General Info
 
-## Commands
-- npm run dev - builds electron typescript code and runs ui dev server
-- *npm run build - builds both electron and ui
-- npm run pack - packs into an executable
+May 2025 update - This here template has been updated to work with Electron 36? and Angular 19
 
-*NOTE - default Electron file/url config path is for the BUILT version of the UI
+## Commands
+
+install > pnpm install
+
+run > pnpm run dev
 
 This project is a boilerplate that includes Electron (with typescript) and Angular in one package, ready to go, right out of the box.
 I havent found any other boilerplates/templates that are to my liking and/or flexible enough so I decided to make one.
 
 The idea is that the Electron part and the UI part are close enough that they are easy to build and pack, but still far enough apart that they are relatively easy to replace with a UI of your liking, and not cause headaches.
-
-ipcRenderer is available by default as a global variable and is not impacted by any UI changes.
-
 
 # Legal
 
@@ -41,7 +39,6 @@ Edit the build process in package.json accordingly.
 - Generate a new React application inside of the /src folder
 - Make sure that React app is built into dist/app/ui (use whatever build process you like)
 - Edit package.json to run the correct commands for building and/or running your React app
-- edit dev.server.js to use the correct commands, based on package.json
 - in /app/main/Main.ts -> change the port from 4200 to 3000 for the dev version. (from Angular default port to React default port)
 - type npm run dev, press enter.
 
